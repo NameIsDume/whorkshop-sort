@@ -10,14 +10,11 @@
 import sys
 import time
 
-def quick_sort(arr):
-    if len(arr) <= 1:
-        return arr
-    else:
-        pivot = arr[0]
-        less_than_pivot = [x for x in arr[1:] if x <= pivot]
-        greater_than_pivot = [x for x in arr[1:] if x > pivot]
-        return quick_sort(less_than_pivot) + [pivot] + quick_sort(greater_than_pivot)
+def quick_sort(array):
+    # Choix du pivot, on choisit le premier, le dernier ou un élément médian de la liste
+    # Réorganise la liste pour que tous les éléments plus petits que le pivot soient à gauche, et tous les éléments plus grands à droite. Après, le pivot est à sa position finale.
+    # Récursivité l'algorithme de tri rapide aux sous-listes à gauche et à droite du pivot jusqu'à ce que toute la liste soit triée.
+
 
 def main():
     try:

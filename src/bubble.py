@@ -11,21 +11,20 @@ import time
 import sys
 
 def bubble_sort(array: list):
-    start_time = time.time() # Je début le chrono
+    start_time = time.time() # Je débute le chrono
     len_array: int = len(array) # Je recup la longueur
 
-    for i in range(len_array):
-        for j in range(0, len_array-i-1):
-            if array[j] > array[j+1]:
-                array[j], array[j+1] = array[j+1], array[j]
+    # Vous devez refaire le bubble sort
+    # Vous comparez chaque element avec son voisin et les echanger si nécessaire
+
 
     end_time = time.time()  # Enregistre le temps de fin
     return array, end_time - start_time
 
-def main():
+def main(): # Pas besoin de toucher au main
     try:
-        input_numbers = sys.stdin.readline().strip()  # Lecture de la ligne depuis stdin
-        numbers = [int(x) for x in input_numbers.split()]  # Conversion en liste d'entiers
+        input_numbers = sys.stdin.readline().strip()
+        numbers = [int(x) for x in input_numbers.split()]
     except ValueError:
         print("Le fichier contient des valeurs non numériques.")
         return

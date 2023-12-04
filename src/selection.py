@@ -14,12 +14,11 @@ def selection_sort(array: list):
     len_array = len(array)
     start_time = time.time()
 
-    for i in range(len_array - 1):
-        min_index = i
-        for j in range(i + 1, len_array):
-            if array[j] < array[min_index]:
-                min_index = j
-        array[i], array[min_index] = array[min_index], array[i]
+    # Toute la liste est considérée comme non triée
+    # On parcourt la liste à partir de la première position jusqu'à end - 1
+    # Sélectionne l'élément le plus petit dans la partie non triée de la liste
+    # L'élément le plus petit trouvé échange la première position de la partie non triée
+    # Répètition jusqu'à ce que toute la liste soit triée.
 
     end_time = time.time()
     return array, end_time - start_time
